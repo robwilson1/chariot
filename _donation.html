@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 text-center push-down-12">
-      <h1>You are donating to {{charity}}</h1>
-      <h3>On behalf of {{team}}</h3>
+      <h1>You are donating to {{team.charity}}</h1>
+      <h3>On behalf of {{team.name}}</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 text-center push-down-3">
-      <form ng-submit="">
+      <form>
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="gbp-addon">£</span>
-          <input type="number" class="form-control" placeholder="Donation Amount">
+          <input type="number" name="amount" class="form-control" placeholder="Donation Amount">
         </div><br>
         <span class="input-group-btn">
         <button id="donate-button" type="button" class="btn btn-default btn-lg push-down-2">
