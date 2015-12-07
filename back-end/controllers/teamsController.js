@@ -4,7 +4,7 @@ var Team  = require("../models/team");
 function teamsIndex(req,res) {
   Team.find({}, function(err, teams){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-    return res.status(200).json({ teams: teams });
+    return res.status(200).json(teams);
   });
 }
 
@@ -13,7 +13,7 @@ function teamsShow(req,res) {
   Team.findOne({_id: id}, function(err, team){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if(!team) return res.status(404).json({ message: 'Team not found.' });
-    return res.status(200).json({ team: team });
+    return res.status(200).json(team);
   });
 }
 

@@ -1,4 +1,4 @@
-<section id="landing">
+<section id="landing" ng-controller="MainController as main">
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
@@ -8,17 +8,7 @@
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <form>
-        <div class="form-group">
-          <label for="sel1">Choose competition</label>
-          <select class="form-control" id="choose_competition">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
-        </div>
-      </form>
+      <button ng-click="main.selectCompetition(main.competition)"></button>
     </div>
   </div>
 
