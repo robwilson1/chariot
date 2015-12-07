@@ -6,20 +6,20 @@ var competitorsController = require('../controllers/competitorsController');
 
 router.route('/competitions')
   .get(competitionsController.competitionsIndex)
-  .post()
+  .post(competitionsController.competitionsCreate)
 
 router.route('/competitions/:id')
   .get(competitionsController.competitionsShow)
-  .put()
-  .delete()
+  .put(competitionsController.competitionsUpdate)
+  .delete(competitionsController.competitionsDelete)
 
 router.route('/competitors')
   .get(competitorsController.competitorsIndex)
-  .post()
+  .post(competitorsController.competitorsCreate)
 
 router.route('/competitors/:id')
-  .get()
-  .put()
-  .delete()
+  .get(competitorsController.competitorsShow)
+  .put(competitorsController.competitorsUpdate)
+  .delete(competitorsController.competitorsDelete)
 
 module.exports = router;

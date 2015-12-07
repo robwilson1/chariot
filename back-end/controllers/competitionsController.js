@@ -9,9 +9,9 @@ function competitionsIndex(req,res) {
 
 function competitionsShow(req,res) {
   var id = req.params.id;
-  Compeitition.findOne({ _id: id }).poplulate('competitors').exec(function(err, competition){
+  Competition.findOne({ _id: id }).populate('competitors').exec(function(err, competition){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-    if (!competition) return res.status(404).json({ message: 'Competiton not found'});
+    if (!competition) return res.status(404).json({ message: 'Competition not found'});
     return res.status(200).json({ competition: competition });
   })
 }
@@ -27,12 +27,11 @@ function competitionsCreate(req,res) {
 
 function competitionsUpdate(req,res) {
   var id = req.params.id;
-  Competition.findOneAndUpdate({ _id: id }, req.body, function(err, competition){
+  Competition.findOneAndUpdate({_id: id}, req.body, function(err, competition){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-    if (!competition) return res.status(404).json({ message: 'Competiton not found'});
-
-    if (req.body.name) competition.name = competition.name;
-    if (req.body.name) competition.charity = competition.charity;
+    console.log('*********************'+ competition);
+    if (req.body.name) competition.name = req.body.name;
+    if (req.body.name) competition.charity = req.body.charity;
 
     competition.save(function(err){
       if (err) return res.status(500).json({ message: 'Something went wrong.' });
