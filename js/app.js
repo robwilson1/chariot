@@ -19,6 +19,10 @@ function MainConfig($stateProvider, $urlRouterProvider) {
   .state('graphic', {
     url: '/graphic',
     templateUrl: '_graphic.html',
+  })
+  .state('new', {
+    url: '/new',
+    templateUrl: '_new.html',
   });
 
   $urlRouterProvider.otherwise('/');
