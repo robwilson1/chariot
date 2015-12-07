@@ -11,6 +11,10 @@ function MainConfig($stateProvider, $urlRouterProvider) {
   .state('vote', {
     url: '/vote',
     templateUrl: '_votepage.html',
+  })
+  .state('donate', {
+    url: '/donate',
+    templateUrl: '_donation.html',
   });
 
   $urlRouterProvider.otherwise('/');
