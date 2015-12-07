@@ -29,5 +29,7 @@ app.use(methodOverride(function(req, res){
 
 //Routes
 var routes = require('./config/routes');
+app.use('/api', routes);
+
 app.listen(3000);
 console.log('Listening on localhost:3000')
