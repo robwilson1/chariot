@@ -29,9 +29,11 @@ function competitionsUpdate(req,res) {
   var id = req.params.id;
   Competition.findOneAndUpdate({_id: id}, req.body, function(err, competition){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-    console.log('*********************'+ competition);
-    if (req.body.name) competition.name = req.body.name;
-    if (req.body.name) competition.charity = req.body.charity;
+
+    if (req.body.name) competition.name         = req.body.name;
+    if (req.body.charity) competition.charity   = req.body.charity;
+    if (req.body.target) competition.target     = req.body.target;
+    if (req.body.deadline) competition.deadline = req.body.deadline;
 
     competition.save(function(err){
       if (err) return res.status(500).json({ message: 'Something went wrong.' });
