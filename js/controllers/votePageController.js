@@ -6,7 +6,7 @@ angular
 function VotePageController() {
   var self = this;
 
-  self.title = "title";
+  self.title = "GA Christmas '15";
 
   self.decimal = decimal;
 
