@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="chariotApp">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="utf-8">
@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- 3rd Party JS Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/2.1.4/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/2.1.4/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Local JS Files -->
-    <script src="js/app.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/votePageController.js"></script>
 
   </head>
-  <body ng-app="chariotApp">
+  <body>
     <div ui-view>
 
     </div>
