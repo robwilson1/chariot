@@ -16,6 +16,7 @@ function VotePageController() {
   self.first.amount   = 12454;
   self.second.amount  = 8230;
   self.target         = 20000;
+  self.total          = self.first.amount + self.second.amount;
 
   self.first.decimal  = self.first.amount/self.target;
   self.second.decimal = self.second.amount/self.target;
@@ -23,8 +24,7 @@ function VotePageController() {
   self.first.percent  = self.first.decimal*100 + "%";
   self.second.percent = self.second.decimal*100 + "%";
 
-  function decimal(amount) {
-    var decimal = (amount/self.total)*100;
-     return decimal;
+  self.donate = function(team) {
+    console.log(team);
   }
 }
