@@ -51,6 +51,10 @@ input[placeholder] {
   text-align: center;
 }
 
+.white {
+  color: #ffffff;
+}
+
 .push-down-1 { margin-top: 1em; }
 .push-down-2 { margin-top: 2em; }
 .push-down-3 { margin-top: 3em; }

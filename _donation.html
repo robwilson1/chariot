@@ -1,8 +1,8 @@
-<div class="container" ng-controller="DonationController as donation">
+<div class="container">
   <div class="row">
-    <div class="col-md-12 text-center push-down-12">
+    <div class="col-md-12 text-center push-down-12 white">
       <h1>You are donating to {{team.charity}}</h1>
-      <h3>On behalf of {{team.name}}</h3>
+      <h3>On behalf of team {{team.name}}</h3>
     </div>
   </div>
   <div class="row">
@@ -10,10 +10,10 @@
       <form>
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="gbp-addon">£</span>
-          <input type="number" name="amount" ng-model="amount" class="form-control" placeholder="Donation Amount">
+          <input type="number" name="amount" class="form-control" placeholder="Donation Amount">
         </div><br>
         <span class="input-group-btn">
-        <button id="donate-button" ng-click="donation.donate(amount)" class="btn btn-default btn-lg push-down-2">
+        <button id="donate-button" class="btn btn-default btn-lg push-down-2">
           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
         </button>
       </form>
