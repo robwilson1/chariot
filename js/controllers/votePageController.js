@@ -8,8 +8,6 @@ function VotePageController() {
 
   self.title = "title";
 
-  self.decimal = decimal;
-
   self.first = {};
   self.second = {};
 

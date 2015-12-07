@@ -1,6 +1,6 @@
 <section class="row" id="vote-page" ng-controller="VotePageController as votepage">
 
-  <div class="team col-xs-12" id="team-one" ng-click="donate(teamA)">
+  <div class="team col-xs-12" id="team-one" ng-click="donate(votepage.first)">
     <div id="graphic-one">
       <figure>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
@@ -24,7 +24,7 @@
     {{ votepage.title }}
   </div>
 
-  <div class="team col-xs-12" id="team-two" ng-click="donate(teamB)">
+  <div class="team col-xs-12" id="team-two" ng-click="donate(votepage.first)">
     <div id="graphic-two">
       <figure>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
