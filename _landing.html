@@ -8,11 +8,17 @@
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <button ng-click="main.viewCompetition(main.competition)"></button>
+      <form ng-submit="main.viewCompetition(competition)">
+        <div class="form-group">
+          <label for="sel1">Choose competition</label>
+          <select class="form-control" id="choose_competition">
+            <option ng-repeat="competition in main.competitions">{{ competition.name }}</option>
+          </select>
+          <button type="submit">GO!</button>
+        </div>
+      </form>
     </div>
   </div>
-
-  {{ main.competition }}
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
