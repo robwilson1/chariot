@@ -1,18 +1,17 @@
 #vote-page {
-  max-width: 35vh;
-  margin: 10vh auto;
+  max-width: 40vh;
+  margin: 5vh auto;
   vertical-align: middle;
 }
 
 .team {
   margin: 0 auto;
-  height: 35vh;
-  width: 35vh;
+  height: 40vh;
+  width: 40vh;
   position: relative;
 }
 
 #graphic-one {
-  border: 1px solid black;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -24,7 +23,6 @@
 }
 
 #graphic-two {
-  border: 1px solid black;
   border-radius: 50%;
   position: absolute;
   top: 0;
