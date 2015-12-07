@@ -19,7 +19,7 @@ function MainController(Competition, $state) {
   self.viewCompetition = function(competition) {
     console.log(self.competition);
     $state.go('vote');
-  }
+  };
 
   self.title = "title";
 
@@ -47,5 +47,6 @@ function MainController(Competition, $state) {
 
   self.donate = function(team) {
     console.log(team);
-  }
-}
+    $state.go('donate')
+  };
+};

@@ -2,18 +2,16 @@ angular
   .module('chariotApp')
   .controller('DonationController', DonationController);
 
-DonationController.$inject = ['$resource'];
-function DonationController($resource) {
+function DonationController() {
   var self = this;
 
   self.donate = function(amount) {
-    console.log(amount);
-    $resource(
-      'http://www.justgiving.com/4w350m3/donate/direct/charity/:charityId',
-      {charityId: '@id'},
-      {donate: {
-        method: 'POST',
-        params: {},
-      }, });
+    $.ajax({
+      url: 'http://localhost:3000/api/teams/5665e92b699ea7ac664d58c7',
+      type: 'PUT',
+      data: { amount: amount},
+    }).done(function() {
+      console.log('Updated team with £' + amount);
+    });
   };
 };
