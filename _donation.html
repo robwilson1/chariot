@@ -1,4 +1,4 @@
-<div class="container" ng-controller="TeamController as team">
+<div class="container">
   <div class="row">
     <div class="col-md-12 text-center push-down-12">
       <h1>You are donating to {{team.charity}}</h1>
@@ -8,7 +8,6 @@
   <div class="row">
     <div class="col-md-12 text-center push-down-3">
       <form ng-submit="team.donate(amount)">
-        <!-- submit = team.donate(amount) -->
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="gbp-addon">£</span>
           <input type="number" name="amount" class="form-control" placeholder="Donation Amount">
