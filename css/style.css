@@ -10,8 +10,12 @@ body {
   /*background-color: navy;/*#A63636;*/
 }
 
+#main-upper {
+  background-color: #FFF;
+}
+
 #main-lower {
-  background-color: #F5F5F5;
+  /*background-color: #F5F5F5;*/
 }
 
 #landing {
@@ -46,8 +50,6 @@ body {
 
 #graphic-one,
 #graphic-two {
-/*  border: 1px solid black;
-  border-radius: 50%;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -63,23 +65,27 @@ body {
 }
 
 .title h2.competitiontitle {
-  line-height: 8vh;
-  font-size: 4vh;
   font-weight: bold;
-  height: 10vh;
+/*  line-height: 8vh;
+  font-size: 4vh;
+  height: 10vh;*/
   margin: 0;
 }
 
 .title h3.target {
-  line-height: 6vh;
-  font-size: 3vh;
   font-weight: bold;
-  height: 8vh;
+/*  line-height: 6vh;
+  font-size: 3vh;
+  height: 8vh;*/
   margin: 0;
 }
 
 input[placeholder] {
   text-align: center;
+}
+
+.white {
+  color: #ffffff;
 }
 
 .push-down-1 { margin-top: 1em; }

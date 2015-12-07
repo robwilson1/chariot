@@ -27,13 +27,3 @@ function MainConfig($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/');
 };
-
-//================//
-// END OF ANGULAR //
-//================//
-
-$(ready);
-
-function ready() {
-  $()
-};

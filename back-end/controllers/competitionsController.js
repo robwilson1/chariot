@@ -3,7 +3,7 @@ var Competition = require("../models/competition");
 function competitionsIndex(req,res) {
   Competition.find({}, function(err, competitions){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-    return res.status(200).json({ competitions: competitions });
+    return res.status(200).json(competitions);
   })
 }
 
@@ -12,7 +12,7 @@ function competitionsShow(req,res) {
   Competition.findOne({ _id: id }).populate('teams').exec(function(err, competition){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!competition) return res.status(404).json({ message: 'Competition not found'});
-    return res.status(200).json({ competition: competition });
+    return res.status(200).json(competition);
   })
 }
 
