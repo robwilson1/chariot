@@ -1,0 +1,18 @@
+#vote-page {
+  max-width: 360px;
+  margin: 0 auto;
+  vertical-align: middle; }
+  #vote-page .team {
+    border: 1px solid black;
+    height: 40vh;
+    position: relative; }
+    #vote-page .team .graphic {
+      border: 1px solid black;
+      margin: 5vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */
