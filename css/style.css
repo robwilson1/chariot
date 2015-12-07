@@ -16,7 +16,8 @@
 }
 
 #graphic-one {
-  border-radius: 50%;
+/*  border: 1px solid black;
+  border-radius: 50%;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +28,8 @@
 }
 
 #graphic-two {
-  border-radius: 50%;
+/*  border: 1px solid black;
+  border-radius: 50%;*/
   position: absolute;
   top: 0;
   left: 0;

@@ -1,7 +1,7 @@
 /* http://codepen.io/NickyCDK/pen/AIonk */
 
-body { background-color:#333; }
-#snow{
+body { background-color: #7EC0EE; }
+.snow{
   background: none;
   font-family: Androgyne;
   background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
