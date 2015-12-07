@@ -1,18 +1,70 @@
+.main {
+  /*background-color: navy;/*#A63636;*/
+}
+
 #vote-page {
-  max-width: 360px;
+  max-width: 40vh;
+  margin: 5vh auto;
+  vertical-align: middle;
+}
+
+.team {
   margin: 0 auto;
-  vertical-align: middle; }
-  #vote-page .team {
-    border: 1px solid black;
-    height: 40vh;
-    position: relative; }
-    #vote-page .team .graphic {
-      border: 1px solid black;
-      margin: 5vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
+  height: 40vh;
+  width: 40vh;
+  position: relative;
+}
+
+#graphic-one {
+/*  border: 1px solid black;
+  border-radius: 50%;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#graphic-two {
+/*  border: 1px solid black;
+  border-radius: 50%;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  border: 1px solid black;
+  line-height: 8vh;
+  font-size: 5vh;
+  height: 10vh;
+  text-align: center;
+}
+
+input[placeholder] {
+  text-align: center;
+}
+
+.push-down-1 { margin-top: 1em; }
+.push-down-2 { margin-top: 2em; }
+.push-down-3 { margin-top: 3em; }
+.push-down-4 { margin-top: 4em; }
+.push-down-5 { margin-top: 5em; }
+.push-down-6 { margin-top: 6em; }
+.push-down-7 { margin-top: 7em; }
+.push-down-8 { margin-top: 8em; }
+.push-down-9 { margin-top: 9em; }
+.push-down-10 { margin-top: 10em; }
+.push-down-11 { margin-top: 11em; }
+.push-down-12 { margin-top: 12em; }
+.push-down-13 { margin-top: 13em; }
+.push-down-14 { margin-top: 14em; }
+.push-down-15 { margin-top: 15em; }
 
 /*# sourceMappingURL=style.css.map */

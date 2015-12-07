@@ -15,7 +15,25 @@ function MainConfig($stateProvider, $urlRouterProvider) {
   .state('donate', {
     url: '/donate',
     templateUrl: '_donation.html',
+  })
+  .state('graphic', {
+    url: '/graphic',
+    templateUrl: '_graphic.html',
+  })
+  .state('new', {
+    url: '/new',
+    templateUrl: '_new.html',
   });
 
   $urlRouterProvider.otherwise('/');
+};
+
+//================//
+// END OF ANGULAR //
+//================//
+
+$(ready);
+
+function ready() {
+  $()
 };
