@@ -2,7 +2,7 @@ var express  = require('express');
 var router   = express.Router();
 
 var competitionsController  = require('../controllers/competitionsController');
-var competitorsController = require('../controllers/competitorsController');
+var teamsController = require('../controllers/teamsController');
 
 router.route('/competitions')
   .get(competitionsController.competitionsIndex)
@@ -13,13 +13,13 @@ router.route('/competitions/:id')
   .put(competitionsController.competitionsUpdate)
   .delete(competitionsController.competitionsDelete)
 
-router.route('/competitors')
-  .get(competitorsController.competitorsIndex)
-  .post(competitorsController.competitorsCreate)
+router.route('/teams')
+  .get(teamsController.teamsIndex)
+  .post(teamsController.teamsCreate)
 
-router.route('/competitors/:id')
-  .get(competitorsController.competitorsShow)
-  .put(competitorsController.competitorsUpdate)
-  .delete(competitorsController.competitorsDelete)
+router.route('/teams/:id')
+  .get(teamsController.teamsShow)
+  .put(teamsController.teamsUpdate)
+  .delete(teamsController.teamsDelete)
 
 module.exports = router;

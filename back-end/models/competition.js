@@ -5,7 +5,7 @@ var competitionSchema = new mongoose.Schema({
   charity: {type: String, required: true},
   target: {type: Number, required: true},
   deadline: Date,
-  teams: [{type: mongoose.Schema.Types.ObjectId, ref: 'Competitor'}]
+  teams: [{type: mongoose.Schema.Types.ObjectId, ref: 'Team'}]
 })
 
 module.exports = mongoose.model('Competition', competitionSchema);

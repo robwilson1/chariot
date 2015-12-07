@@ -9,7 +9,7 @@ function competitionsIndex(req,res) {
 
 function competitionsShow(req,res) {
   var id = req.params.id;
-  Competition.findOne({ _id: id }).populate('competitors').exec(function(err, competition){
+  Competition.findOne({ _id: id }).populate('teams').exec(function(err, competition){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
     if (!competition) return res.status(404).json({ message: 'Competition not found'});
     return res.status(200).json({ competition: competition });

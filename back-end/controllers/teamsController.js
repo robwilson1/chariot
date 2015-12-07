@@ -43,17 +43,17 @@ function teamsCreate(req,res) {
 
 function teamsUpdate(req,res) {
   var id = req.params.id;
-    Team.findOneAndUpdate({ _id: id }, req.body, function(err, team){
+  Team.findOneAndUpdate({ _id: id }, req.body, function(err, team){
+    if (err) return res.status(500).json({ message: 'Something went wrong.' });
+
+    if (req.body.name) team.name     = req.body.name;
+    if (req.body.amount) team.amount = req.body.amount;
+
+    team.save(function(err){
       if (err) return res.status(500).json({ message: 'Something went wrong.' });
-
-      if (req.body.name) team.name     = req.body.name;
-      if (req.body.amount) team.amount = req.body.amount;
-
-      team.save(function(err){
-        if (err) return res.status(500).json({ message: 'Something went wrong.' });
-        return res.status(200).json({ message: 'team succesfully updated.', team: team });
-      });
+      return res.status(200).json({ message: 'team succesfully updated.', team: team });
     });
+  });
 }
 
 function teamsDelete(req,res) {
