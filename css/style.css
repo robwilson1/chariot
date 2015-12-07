@@ -1,32 +1,25 @@
+* {
+  font-family: Lato, sans-serif;
+}
+
 .main {
   /*background-color: navy;/*#A63636;*/
 }
 
 #vote-page {
-  max-width: 40vh;
+  max-width: 35vh;
   margin: 5vh auto;
   vertical-align: middle;
 }
 
 .team {
   margin: 0 auto;
-  height: 40vh;
-  width: 40vh;
+  height: 35vh;
+  width: 35vh;
   position: relative;
 }
 
-#graphic-one {
-/*  border: 1px solid black;
-  border-radius: 50%;*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
+#graphic-one,
 #graphic-two {
 /*  border: 1px solid black;
   border-radius: 50%;*/
@@ -40,11 +33,24 @@
 }
 
 .title {
-  border: 1px solid black;
-  line-height: 8vh;
-  font-size: 5vh;
-  height: 10vh;
+  /*border: 1px solid black;*/
   text-align: center;
+}
+
+.title h2.competitiontitle {
+  line-height: 8vh;
+  font-size: 4vh;
+  font-weight: bold;
+  height: 10vh;
+  margin: 0;
+}
+
+.title h3.target {
+  line-height: 6vh;
+  font-size: 3vh;
+  font-weight: bold;
+  height: 8vh;
+  margin: 0;
 }
 
 input[placeholder] {
