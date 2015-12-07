@@ -7,36 +7,43 @@ MainController.$inject = ["Competition", "$state"];
 function MainController(Competition, $state) {
   var self = this;
 
-  self.competitions = Competition.query(function(data) {
-    console.log(data[0]);
+  self.competition;
+  self.team1;
+  self.team2;
+
+  self.competitions = getCompetitions;
+
+  function getCompetitions() {
+    Competition.query(function(data) {
+      self.competition = data[0];
+      // self.team1 = self.competition.teams[0];
+      // self.team2 = self.competition.teams[1];
+    });
+  }
+  
+  $.when(getCompetitions()).then(function(data) {
+    console.log(data)
   });
 
-  self.competition  = self.competitions[0];
-  console.log(self.competitions);
 
-  self.first = {};
-  self.second = {};
+ 
 
-  self.selectCompetiton = function() {
-    self.competition = competition;
-    console.log(self.competition);
-  }
+
 
   self.viewCompetition = function(competition) {
-    console.log(self.competition);
     $state.go('vote');
   }
 
-  self.first.amount   = 12454;
-  self.second.amount  = 8230;
-  self.target         = 20000;
-  self.total          = self.first.amount + self.second.amount;
+  // self.team1.amount   = 12454;
+  // self.team2.amount   = 8230;
+  // self.target         = 20000;
+  // self.total          = self.team1.amount + self.team2.amount;
 
-  self.first.decimal  = self.first.amount/self.target;
-  self.second.decimal = self.second.amount/self.target;
+  // self.team1.decimal  = self.team1.amount/self.target;
+  // self.team2.decimal = self.team2.amount/self.target;
 
-  self.first.percent  = self.first.decimal*100 + "%";
-  self.second.percent = self.second.decimal*100 + "%";
+  // self.team1.percent  = self.team1.decimal*100 + "%";
+  // self.team2.percent = self.team2.decimal*100 + "%";
 
   self.donate = function(team) {
     console.log(team);
