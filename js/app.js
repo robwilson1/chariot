@@ -1,5 +1,5 @@
 angular
-  .module('chariotApp', ['ui-router', 'ngResource'])
+  .module('chariotApp', ['ui.router', 'ngResource'])
   .config(MainConfig);
 
 function MainConfig($stateProvider, $urlRouterProvider) {
