@@ -7,25 +7,32 @@ MainController.$inject = ["Competition", "$state"];
 function MainController(Competition, $state) {
   var self = this;
 
-  self.competitions = Competition.query(function(data) {
-    console.log(data[0]);
-  });
-
-  self.competition  = self.competitions[0];
+  self.competitions = Competition.query();
   console.log(self.competitions);
 
-  self.first = {};
-  self.second = {};
+  self.competition  = {};
 
   self.selectCompetiton = function() {
     self.competition = competition;
-    console.log(self.competition);
-  };
+  }
 
   self.viewCompetition = function(competition) {
     console.log(self.competition);
     $state.go('vote');
   };
+
+  self.title = "title";
+
+  self.first = {};
+  self.second = {};
+
+
+
+
+
+
+
+
 
   self.first.amount   = 12454;
   self.second.amount  = 8230;
