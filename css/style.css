@@ -1,40 +1,46 @@
 #vote-page {
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 35vh;
+  margin: 10vh auto;
   vertical-align: middle;
 }
 
 .team {
-  border: 1px solid black;
-  height: 40vh;
+  margin: 0 auto;
+  height: 35vh;
+  width: 35vh;
   position: relative;
 }
 
 #graphic-one {
   border: 1px solid black;
-  margin: 5vh 5vh 0 5vh;
+  border-radius: 50%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 #graphic-two {
   border: 1px solid black;
-  margin: 0 5vh 5vh 5vh;
+  border-radius: 50%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .title {
   border: 1px solid black;
-  line-height: 40px;
-  font-size: 36px;
-  height: 50px;
+  line-height: 8vh;
+  font-size: 5vh;
+  height: 10vh;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,4 +6,6 @@ angular
 function VotePageController() {
   var self = this;
 
+  self.test = "test"
+
 }
