@@ -7,7 +7,7 @@ function DonationController() {
 
   self.donate = function(amount) {
     $.ajax({
-      url: 'http://localhost:3000/api/teams/:id',
+      url: 'http://localhost:3000/api/teams/5665e92b699ea7ac664d58c7',
       type: 'PUT',
       data: { amount: amount},
     }).done(function() {

@@ -20,12 +20,12 @@ function MainController(Competition, $state) {
   self.selectCompetiton = function() {
     self.competition = competition;
     console.log(self.competition);
-  }
+  };
 
   self.viewCompetition = function(competition) {
     console.log(self.competition);
     $state.go('vote');
-  }
+  };
 
   self.first.amount   = 12454;
   self.second.amount  = 8230;
@@ -40,5 +40,6 @@ function MainController(Competition, $state) {
 
   self.donate = function(team) {
     console.log(team);
-  }
-}
+    $state.go('donate')
+  };
+};
