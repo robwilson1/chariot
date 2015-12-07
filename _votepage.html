@@ -2,7 +2,21 @@
 
   <div class="team col-xs-12" id="team-one">
     <div id="graphic-one">
-      lalalala
+      <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+            <linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">
+                <stop offset="0%" stop-opacity="1" stop-color="red"/>
+                <stop offset="40%" stop-opacity="1" stop-color="red">
+                  <animate attributeName="offset" values="0;{{ votepage.team.value.fraction }};0" repeatCount="0.5" dur="5s" begin="0s"/>
+                </stop>
+                <stop offset="40%" stop-opacity="0" stop-color="white">
+                  <animate attributeName="offset" values="0;{{ votepage.team.value.fraction }};0" repeatCount="0.5" dur="5s"  begin="0s"/>
+                </stop>
+                <stop offset="100%" stop-opacity="0" stop-color="white"/>
+            </linearGradient>
+            <circle cx="50" cy="50" r="45" fill="url(#lg)" stroke="crimson" stroke-width="5"/>
+        </svg>
+      </figure>
     </div>
   </div>
 
@@ -12,7 +26,21 @@
 
   <div class="team col-xs-12" id="team-two">
     <div id="graphic-two">
-      lalalala
+      <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+            <linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">
+                <stop offset="0%" stop-opacity="1" stop-color="red"/>
+                <stop offset="40%" stop-opacity="1" stop-color="red">
+                  <animate attributeName="offset" values="0;{{ votepage.team.value.fraction }};0" repeatCount="0.5" dur="5s" begin="0s"/>
+                </stop>
+                <stop offset="40%" stop-opacity="0" stop-color="white">
+                  <animate attributeName="offset" values="0;{{ votepage.team.value.fraction }};0" repeatCount="0.5" dur="5s"  begin="0s"/>
+                </stop>
+                <stop offset="100%" stop-opacity="0" stop-color="white"/>
+            </linearGradient>
+            <circle cx="50" cy="50" r="45" fill="url(#lg)" stroke="crimson" stroke-width="5"/>
+        </svg>
+      </figure>
     </div>
   </div>
 
