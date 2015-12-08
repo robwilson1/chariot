@@ -1,0 +1,23 @@
+<section id="landing" ng-controller="MainController as main">
+
+  <div id="main-upper" class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h1 id="main-heading">CHARIOT</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <form ng-submit="main.viewCompetition(competition)">
+        <div class="form-group">
+          <select class="form-control" id="choose_competition">
+            <option autofocus>Choose your competition...</option>
+            <option ng-repeat="competition in main.competitions">{{ competition.name }}</option>
+          </select>
+          <button id="main-submit" type="submit">Go</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>
