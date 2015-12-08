@@ -85,7 +85,8 @@ h2 {
   margin-bottom: 5vh;
 }
 
-.search{
+.search,
+.submit{
   width: 75px;
   height: 75px;
 }
