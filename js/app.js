@@ -22,7 +22,7 @@ function MainConfig($stateProvider, $urlRouterProvider) {
   })
   .state('new', {
     url: '/new',
-    templateUrl: '_new.html',
+    templateUrl: '_new2.html',
   });
 
   $urlRouterProvider.otherwise('/');
