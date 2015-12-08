@@ -101,5 +101,12 @@ h3 {
 
 .donate {
   margin-top: 25vh;
+  font-size: 5em;
 }
+
+input[placeholder] {
+  font-size: 1.5em;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
