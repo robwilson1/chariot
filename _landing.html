@@ -2,19 +2,21 @@
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <img ng-src="http://fillmurray.com/200/200">
+      <img class="chariot" ng-src="./assets/chaaaRIOT_wordmark.png">
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-xs-6 col-xs-offset-3">
       <form ng-submit="main.viewCompetition(competition)">
         <div class="form-group">
-          <label for="sel1">Choose competition</label>
           <select class="form-control" id="choose_competition">
-            <option ng-repeat="competition in main.competitions">{{ competition.name }}</option>
+            <option value="Select Competition" disabled> Select Competition</option>
+            <option> General Assembly Food Drive</option>
+            <option> Shelter</option>
+            <option> Help People Afford London Flats</option>
           </select>
-          <button type="submit">GO!</button>
+          <button type="submit" class="btn btn-default"><img class="search" ng-src="./assets/search_icon.png"></button>
         </div>
       </form>
     </div>
@@ -22,7 +24,6 @@
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <img ng-src="http://fillmurray.com/200/200">
     </div>
   </div>
 
