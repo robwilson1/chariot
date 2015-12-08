@@ -22,7 +22,6 @@ function MainController(Competition, $state) {
   };
 
   self.title = "title";
-
   self.first = {};
   self.second = {};
 
@@ -33,32 +32,61 @@ function MainController(Competition, $state) {
       type: 'GET',
     }).done(function(data) {
       self.first.amount = data[0].amount;
+      self.first.name = data[0].name;
+      self.second.amount = data[1].amount;
+      self.second.name = data[1].name;
 
-      self.getSecond = function() {
-        $.ajax({
-          url: 'http://localhost:3000/api/teams/',
-          type: 'GET',
-        }).done(function(data) {
-          self.second.amount = data[1].amount;
-          self.target         = 20000;
-          self.total          = self.firstAmount + self.secondAmount;
+      self.target         = 20000;
+      self.total          = self.first.amount + self.second.amount;
 
-          self.first.decimal  = self.first.amount / self.target;
-          self.second.decimal = self.second.amount / self.target;
+      self.first.decimal  = self.first.amount / self.target;
+      self.second.decimal = self.second.amount / self.target;
 
-          self.first.percent  = self.first.decimal * 100 + "%";
-          self.second.percent = self.second.decimal * 100 + "%";
-          console.log("[+] " + self.first.decimal);
-          console.log("[+] " + self.first.amount);
-          console.log("[+] " + self.first.percent);
-          console.log("[+] " + self.second.decimal);
-          console.log("[+] " + self.second.amount);
-          console.log("[+] " + self.second.percent);
-        });
-      };
+      self.first.percent  = self.first.decimal * 100 + "%";
+      self.second.percent = self.second.decimal * 100 + "%";
 
-      self.getSecond();
+      console.log("[+] Team 1 decimal " + self.first.decimal);
+      console.log("[+] Team 1 amount " + self.first.amount);
+      console.log("[+] Team 1 % " + self.first.percent);
+      console.log("[+] Team 2 decimal " + self.second.decimal);
+      console.log("[+] Team 2 amount " + self.second.amount);
+      console.log("[+] Team 2 percent " + self.second.percent);
 
+      $('#graphic-one').html(
+        '<figure>'+
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">'+
+              '<linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">'+
+                  '<stop offset="0%" stop-opacity="1" stop-color="#006A00"/>'+
+                  '<stop offset="{{main.first.percent}}" stop-opacity="1" stop-color="#006A00">'+
+                    '<animate attributeName="offset" values="0; {{main.first.decimal}};0" repeatCount="0.5" dur="5s" begin="0s"/>'+
+                  '</stop>'+
+                  '<stop offset="{{main.first.percent}}" stop-opacity="0" stop-color="#006A00">'+
+                    '<animate attributeName="offset" values="0;{{main.first.decimal}};0" repeatCount="0.5" dur="5s"  begin="0s"/>'+
+                  '</stop>'+
+                  '<stop offset="100%" stop-opacity="0" stop-color="#006A00"/>'+
+              '</linearGradient>'+
+              '<circle cx="50" cy="50" r="30" fill="url(#lg)" stroke="black" stroke-width="4"/>'+
+          '</svg>'+
+        '</figure>'
+      );
+
+      $('#graphic-two').html(
+        '<figure>'+
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">'+
+              '<linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">'+
+                  '<stop offset="0%" stop-opacity="1" stop-color="#006A00"/>'+
+                  '<stop offset="{{main.second.percent}}" stop-opacity="1" stop-color="#006A00">'+
+                    '<animate attributeName="offset" values="0; {{main.second.decimal}};0" repeatCount="0.5" dur="5s" begin="0s"/>'+
+                  '</stop>'+
+                  '<stop offset="{{main.second.percent}}" stop-opacity="0" stop-color="#006A00">'+
+                    '<animate attributeName="offset" values="0;{{main.second.decimal}};0" repeatCount="0.5" dur="5s"  begin="0s"/>'+
+                  '</stop>'+
+                  '<stop offset="100%" stop-opacity="0" stop-color="#006A00"/>'+
+              '</linearGradient>'+
+              '<circle cx="50" cy="50" r="30" fill="url(#lg)" stroke="black" stroke-width="4"/>'+
+          '</svg>'+
+        '</figure>'
+      );
     });
   };
 
@@ -84,7 +112,7 @@ function MainController(Competition, $state) {
   };
 
   // This is outside the callbacks, so will happen regardless of saving to the database
-  
+
   self.viewCompetition(self.competition);
   };
 
