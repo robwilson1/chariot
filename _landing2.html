@@ -14,10 +14,19 @@
             <option autofocus>Choose your competition...</option>
             <option ng-repeat="competition in main.competitions">{{ competition.name }}</option>
           </select>
-          <button id="main-submit" type="submit">Go</button>
+          <button id="main-submit" type="submit" class="btn btn-default">Go</button>
         </div>
       </form>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <form ng-submit="main.newCompetition()">
+        <div class="form-group">
+          <button id="create-comp" type="submit" class="btn btn-default">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>

@@ -53,14 +53,22 @@ function MainController(Competition, $state) {
   self.addCompetition = function() {
     if (self.competition._id) {
       Competition.update(self.competition, function(){
+        self.viewCompetition(self.competition);
         self.competition = {};
       });
     } else {
       Competition.save(self.competition, function(competition) {
         self.competitions.push(competition);
-        self.competition = {}
+        self.viewCompetition(self.competition);
+        self.competition = {};
       });
     }
+    // This is outside the callbacks, so will happen regardless of saving to the database
+    self.viewCompetition(self.competition);
   }
   
+  self.newCompetition = function() {
+    $state.go('new');
+  };
+
 };
