@@ -49,4 +49,18 @@ function MainController(Competition, $state) {
     console.log(team);
     $state.go('donate')
   };
+
+  self.addCompetition = function() {
+    if (self.competition._id) {
+      Competition.update(self.competition, function(){
+        self.competition = {};
+      });
+    } else {
+      Competition.save(self.competition, function(competition) {
+        self.competitions.push(competition);
+        self.competition = {}
+      });
+    }
+  }
+  
 };
