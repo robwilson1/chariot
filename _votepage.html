@@ -8,10 +8,10 @@
             <linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">
                 <stop offset="0%" stop-opacity="1" stop-color="#006A00"/>
                 <stop offset="{{main.first.percent}}" stop-opacity="1" stop-color="#006A00">
-                  <animate attributeName="offset" values="0; {{main.first.decimal}};0" repeatCount="0.5" dur="5s" begin="1s"/>
+                  <animate attributeName="offset" values="0; {{main.first.decimal}};0" repeatCount="0.5" dur="5s" begin="0s"/>
                 </stop>
                 <stop offset="{{main.first.percent}}" stop-opacity="0" stop-color="#006A00">
-                  <animate attributeName="offset" values="0;{{main.first.decimal}};0" repeatCount="0.5" dur="5s"  begin="1s"/>
+                  <animate attributeName="offset" values="0;{{main.first.decimal}};0" repeatCount="0.5" dur="5s"  begin="0s"/>
                 </stop>
                 <stop offset="100%" stop-opacity="0" stop-color="#006A00"/>
             </linearGradient>
@@ -23,7 +23,6 @@
 
   <div class="title col-xs-12">
     <h2>GA FOOD</h2>
-    <h3>goal: £{{ main.target }}</h3>
   </div>
 
   <div class="team col-xs-12" id="team-two" ng-click="main.donate(main.second)">
