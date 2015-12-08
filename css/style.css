@@ -95,6 +95,10 @@ h3 {
   height: 75px;
 }
 
+.submit {
+  font-size: 40px;
+}
+
 #choose_competition, #choose_donation {
   margin: 0 auto;
   width: 80%;
