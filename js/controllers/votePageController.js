@@ -7,7 +7,6 @@ function CompetitionController() {
   var self = this;
 
   self.title = "GA Christmas '15";
-
   self.decimal = decimal;
   self.first = {};
   self.second = {};
