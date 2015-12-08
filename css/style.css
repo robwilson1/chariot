@@ -16,12 +16,16 @@ h1 {
 h2 {
   font-size: 5vh;
   margin: 0 auto;
+}
 
+h3 {
+  font-size: 2.5vh;
+  margin-top: 0;
 }
 
 #vote-page {
   max-width: 40vh;
-  margin: 5vh auto;
+  margin: 2vh auto;
   vertical-align: middle;
 }
 
@@ -60,8 +64,8 @@ h2 {
 
 .title {
   border: 1.5vh solid black;
-  line-height: 8vh;
-  height: 10vh;
+  height: 12vh;
+  line-height: 40px;
   text-align: center;
 }
 
