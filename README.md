@@ -1,10 +1,10 @@
 # chariot
 
-Gamify your donations
+Gamify your donations to charity.
 
 ## Summary
 
-- In the run-up to Christmas, challenge your co-workers:
+- In the run-up to Christmas, challenge your co-workers.
 - Two teams. 1 charity. 1 goal. Who can raise the most before the deadline?
 
 ![Image of the competition page of the app](./planning/designs/competition-page.png)
@@ -19,7 +19,7 @@ Ollie Holden [(odholden)](https://github.com/odholden)
 Ben Layer [(benlayer291)](https://github.com/benlayer291)
 Rob Wilson [(phobos101)](https://github.com/phobos101)
 
-## What we used
+## The build
 
 ![Logos for MongoDB, Express.js, Node.js, Angular.js, Bootstrap, HTML5 & CSS3](./planning/tech-used-for-build.png)
 
