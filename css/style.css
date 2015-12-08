@@ -105,8 +105,12 @@ h3 {
 }
 
 .donate {
-  margin-top: 25vh;
+  margin-top: 15vh;
   font-size: 5em;
+}
+
+.form-group{
+  margin: 2em 0;
 }
 
 input[placeholder] {
