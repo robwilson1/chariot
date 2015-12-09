@@ -29,7 +29,7 @@ function teamsCreate(req,res) {
     } else {
       newTeam.save(function(err, team){
         if (err) return res.status(500).json({ message: 'Something went wrong.' });
-        
+
         competition.teams.push(team);
 
         competition.save(function(err){
@@ -45,7 +45,8 @@ function teamsUpdate(req,res) {
   var id = req.params.id;
   Team.findOneAndUpdate({ _id: id }, req.body, function(err, team){
     if (err) return res.status(500).json({ message: 'Something went wrong.' });
-
+    console.log(req.body);
+    console.log(team);
     if (req.body.name) team.name     = req.body.name;
     if (req.body.amount) team.amount = req.body.amount;
 
@@ -71,7 +72,7 @@ function teamsDelete(req,res) {
 
       competition.save(function(err, competition){
         if (err) return res.status(500).json({ message: 'Something went wrong.' });
-        return res.status(201).json({ message: 'Team succesfully deleted'});  
+        return res.status(201).json({ message: 'Team succesfully deleted'});
       });
     });
   });

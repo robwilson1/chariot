@@ -1,0 +1,34 @@
+<div ng-controller="DonationController as donation">
+  <div class="row">
+    <div class="col-md-12 text-center white">
+      <h1 class="donate">CREATE</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center push-down-3">
+      <form role="form"  name="main.newCompetition" ng-submit="main.addCompetition()" id="new-competition-form">
+        <div class="form-group">
+          <input type="text" name="competition-name" placeholder="Competition name (e.g. GA XMAS '15)" class="form-control" ng-model="main.competition.name">
+        </div>   
+        <div class="form-group">
+          <input type="text" name="competition-target" placeholder="Competition target (£)" class="form-control" ng-model="main.competition.target">
+        </div>
+        <div class="form-group">
+          <input type="text" name="competition-charity" placeholder="Charity it'll be going to!" class="form-control" ng-model="main.competition.charity">
+        </div>
+        <div class="form-group">
+          <input type="date" name="competition-deadline" placeholder="25/12/2015" class="form-control" ng-model="main.competition.deadline">
+        </div>
+        <div class="form-group">
+          <input type="text" name="competition-firstteam-name" placeholder="Team 1's name" class="form-control" ng-model="main.competition.first.name">
+        </div>
+        <div class="form-group">
+          <input type="text" name="competition-secondteam-name" placeholder="Team 2's name" class="form-control"  ng-model="main.competition.second.name">
+        </div>
+        <div class="form-group">
+          <button id="main-submit" type="submit" class="btn btn-default submit">GO</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
