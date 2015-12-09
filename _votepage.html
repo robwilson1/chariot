@@ -1,22 +1,25 @@
-<section class="row" id="vote-page" ng-controller="MainController as main">
+<section id="vote-page" ng-controller="MainController as main">
 
-  <div class="team col-xs-12" id="team-one" ng-click="main.donate(main.first)">
-    <h2 id="heading1">{{main.first.name}} - £{{main.first.amount}}</h2>
-    <div id="graphic-one">
+<div class="container">
+  <div class="row">
+    <div class="team col-xs-12" id="team-one" ng-click="main.donate(main.first)">
+      <h2 id="heading1">{{main.first.name}} - £{{main.first.amount}}</h2>
+      <div id="graphic-one">
 
+      </div>
+    </div>
+
+    <div class="title col-xs-12">
+      <h2>GA FOOD</h2>
+      <h2>Target - £{{main.target}}</h2>
+    </div>
+
+    <div class="team col-xs-12" id="team-two" ng-click="main.donate(main.second)">
+      <div id="graphic-two">
+
+      </div>
+      <h2 id="heading2">{{main.second.name}} - £{{main.second.amount}}</h2>
     </div>
   </div>
-
-  <div class="title col-xs-12">
-    <h2>GA FOOD</h2>
-    <h2>Target - £{{main.target}}</h2>
-  </div>
-
-  <div class="team col-xs-12" id="team-two" ng-click="main.donate(main.second)">
-    <div id="graphic-two">
-
-    </div>
-    <h2 id="heading2">{{main.second.name}} - £{{main.second.amount}}</h2>
-  </div>
-
+</div>
 </section>

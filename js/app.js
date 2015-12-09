@@ -6,7 +6,7 @@ function MainConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('landing', {
     url: '/',
-    templateUrl: '_landing.html',
+    templateUrl: '_landing2.html',
   })
   .state('vote', {
     url: '/vote',
