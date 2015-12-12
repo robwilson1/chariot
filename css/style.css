@@ -1,0 +1,9 @@
+.third-width {
+  max-width: 33%;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}

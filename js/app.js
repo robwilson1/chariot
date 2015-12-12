@@ -13,7 +13,7 @@ function MainConfig($stateProvider, $urlRouterProvider) {
     templateUrl: '_votepage.html',
   })
   .state('donate', {
-    url: '/donate',
+    url: '/donate/:id',
     templateUrl: '_donation.html',
   })
   .state('graphic', {
