@@ -2,11 +2,11 @@ angular
   .module('chariotApp')
   .controller('DonationController', DonationController);
 
-DonationController.$inject = ['$state', '$routeParams'];
+DonationController.$inject = ['$state', '$stateParams'];
 
-function DonationController($state, $routeParams) {
+function DonationController($state, $stateParams) {
   var self = this;
-  console.log($routeParams)
+  console.log($stateParams.id)
 
   self.getTotal = function() {
     $.ajax({
@@ -21,14 +21,6 @@ function DonationController($state, $routeParams) {
 
   self.donate = function(amount) {
     self.fullAmount = self.total + amount;
-    $.ajax({
-      url: 'http://localhost:3000/api/teams/'+ self.booleanteamid,
-      type: 'PUT',
-      data: { amount: self.fullAmount},
-    }).done(function() {
-      console.log('Updated team with £' + amount);
-      console.log('Team total now £' + self.fullAmount);
-      $state.go("vote");
-    });
+
   };
 };
