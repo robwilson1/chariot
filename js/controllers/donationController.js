@@ -6,11 +6,10 @@ DonationController.$inject = ['$state', '$stateParams'];
 
 function DonationController($state, $stateParams) {
   var self = this;
-  console.log($stateParams.id)
 
   self.getTotal = function() {
     $.ajax({
-      url: 'http://localhost:3000/api/teams/'+ self.booleanteamid,
+      url: 'http://localhost:3000/api/teams/'+ $stateParams.id,
       type: 'GET'
     }).done(function(data) {
       self.total = data.amount;
@@ -21,6 +20,14 @@ function DonationController($state, $stateParams) {
 
   self.donate = function(amount) {
     self.fullAmount = self.total + amount;
-
+    $.ajax({
+      url: 'http://localhost:3000/api/teams/'+ $stateParams.id,
+      type: 'PUT',
+      data: { amount: self.fullAmount},
+    }).done(function() {
+      console.log('Updated team with £' + amount);
+      console.log('Team total now £' + self.fullAmount);
+      $state.go("vote");
+    });
   };
 };
