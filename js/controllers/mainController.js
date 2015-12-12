@@ -8,7 +8,6 @@ function MainController(Competition, $state) {
   var self = this;
 
   self.competitions = Competition.query();
-  console.log(self.competitions);
 
   self.competition  = {};
 
@@ -17,7 +16,6 @@ function MainController(Competition, $state) {
   };
 
   self.viewCompetition = function(competition) {
-    console.log(self.competition);
     $state.go('vote');
   };
 
@@ -26,15 +24,17 @@ function MainController(Competition, $state) {
   self.second = {};
 
 
-  self.getFirst = function() {
+  self.getTeams = function() {
     $.ajax({
       url: 'http://localhost:3000/api/teams/',
       type: 'GET',
     }).done(function(data) {
       self.first.amount = data[0].amount;
       self.first.name = data[0].name;
+      self.first.id = data[0]._id;
       self.second.amount = data[1].amount;
       self.second.name = data[1].name;
+      self.second.id = data[1]._id;
 
       self.target         = 500;
       self.total          = self.first.amount + self.second.amount;
@@ -44,13 +44,6 @@ function MainController(Competition, $state) {
 
       self.first.percent  = self.first.decimal * 100 + "%";
       self.second.percent = self.second.decimal * 100 + "%";
-
-      console.log("[+] Team 1 decimal " + self.first.decimal);
-      console.log("[+] Team 1 amount " + self.first.amount);
-      console.log("[+] Team 1 % " + self.first.percent);
-      console.log("[+] Team 2 decimal " + self.second.decimal);
-      console.log("[+] Team 2 amount " + self.second.amount);
-      console.log("[+] Team 2 percent " + self.second.percent);
 
       $('#graphic-one').html(
         '<figure>'+
@@ -90,11 +83,11 @@ function MainController(Competition, $state) {
     });
   };
 
-  self.getFirst();
+  self.getTeams();
 
-  self.donate = function(team) {
-    console.log(team);
-    $state.go('donate');
+  self.donate = function(id) {
+    console.log('[+] ID is: ' + id);
+    $state.go('donate', {'id': id});
   };
 
   self.addCompetition = function() {
