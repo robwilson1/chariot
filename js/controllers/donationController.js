@@ -2,13 +2,12 @@ angular
   .module('chariotApp')
   .controller('DonationController', DonationController);
 
-DonationController.$inject = ["$state"];
+DonationController.$inject = ['$state', '$routeParams'];
 
-function DonationController($state) {
+function DonationController($state, $routeParams) {
   var self = this;
+  console.log($routeParams)
 
-  self.arrayteamid   = '5666b53b90c3e7d93bf0c719';
-  self.booleanteamid = '5666b53b90c3e7d93bf0c71a';
   self.getTotal = function() {
     $.ajax({
       url: 'http://localhost:3000/api/teams/'+ self.booleanteamid,
