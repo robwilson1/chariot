@@ -11,7 +11,7 @@ var cookieParser   = require('cookie-parser');
 var app            = express();
 
 //Database
-mongoose.connect('mongodb://localhost:27017/chariot');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/chariot');
 
 //Middleware
 app.use(bodyParser.json());
@@ -30,6 +30,11 @@ app.use(methodOverride(function(req, res){
 //Routes
 var routes = require('./config/routes');
 app.use('/api', routes);
+app.use(express.static(__dirname + "/public"));
+app.get('/', function(req, res) {
+  res.sendFile('/index.html');
+})
 
-app.listen(3000);
-console.log('Listening on localhost:3000')
+var port = process.env.PORT || 3000;
+app.listen(port);
+console.log('Listening on ' + port);
