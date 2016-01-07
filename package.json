@@ -1,19 +1,21 @@
 {
-  "name": "chariot",
+  "name": "back-end",
   "version": "1.0.0",
-  "description": "Gamify your donations",
-  "main": "Gruntfile.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/phobos101/chariot.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/phobos101/chariot/issues"
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.2.9",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7"
   },
-  "homepage": "https://github.com/phobos101/chariot#readme"
+  "description": ""
 }
