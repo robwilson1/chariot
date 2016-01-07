@@ -1,6 +1,6 @@
 <section class="row" id="vote-page" ng-controller="MainController as main">
 
-  <div class="team col-xs-12" id="team-one" ng-click="main.donate(main.first)">
+  <div class="team col-xs-12" id="team-one" ng-click="main.donate(main.first.id)">
     <h2 id="heading1">{{main.first.name}} - £{{main.first.amount}}</h2>
     <div id="graphic-one">
 
@@ -12,7 +12,7 @@
     <h2>Target - £{{main.target}}</h2>
   </div>
 
-  <div class="team col-xs-12" id="team-two" ng-click="main.donate(main.second)">
+  <div class="team col-xs-12" id="team-two" ng-click="main.donate(main.second.id)">
     <div id="graphic-two">
 
     </div>

@@ -13,7 +13,7 @@ function DonationController($state, $stateParams) {
       type: 'GET'
     }).done(function(data) {
       self.total = data.amount;
-      console.log(self.total);
+      // console.log(self.total);
     });
   };
   self.getTotal();
@@ -25,8 +25,8 @@ function DonationController($state, $stateParams) {
       type: 'PUT',
       data: { amount: self.fullAmount},
     }).done(function() {
-      console.log('Updated team with £' + amount);
-      console.log('Team total now £' + self.fullAmount);
+      // console.log('Updated team with £' + amount);
+      // console.log('Team total now £' + self.fullAmount);
       $state.go("vote");
     });
   };

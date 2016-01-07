@@ -86,7 +86,7 @@ function MainController(Competition, $state) {
   self.getTeams();
 
   self.donate = function(id) {
-    console.log('[+] ID is: ' + id);
+    // console.log('[+] ID is: ' + id);
     $state.go('donate', {'id': id});
   };
 
