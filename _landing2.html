@@ -2,7 +2,7 @@
 
   <div id="main-upper" class="row">
     <div class="col-sm-4 col-sm-offset-4">
-      <h1 id="main-heading">CHARIOT</h1>
+      <img class="chariot" ng-src="./assets/chaaaRIOT_wordmark.png">
     </div>
   </div>
 
@@ -14,10 +14,19 @@
             <option autofocus>Choose your competition...</option>
             <option ng-repeat="competition in main.competitions">{{ competition.name }}</option>
           </select>
-          <button id="main-submit" type="submit">Go</button>
+          <button  id="main-submit" type="submit" class="btn btn-default"><img class="search" ng-src="./assets/search_icon.png"></button>
         </div>
       </form>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <form ng-submit="main.newCompetition()">
+        <div class="form-group">
+          <button type="submit" class="btn btn-default"><img class="search" ng-src="./assets/create_icon.png"></button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
