@@ -26,7 +26,7 @@ function MainController(Competition, $state) {
 
   self.getTeams = function() {
     $.ajax({
-      url: 'http://localhost:3000/api/teams/',
+      url: API+'/teams/',
       type: 'GET',
     }).done(function(data) {
       self.first.amount = data[0].amount;

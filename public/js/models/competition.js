@@ -5,7 +5,7 @@ angular
 Competition.$inject = ['$resource'];
 
 function Competition($resource) {
-  return $resource("http://localhost:3000/api/competitions/:id", null, {
+  return $resource(API+"/competitions/:id", null, {
     "update": {method: "PUT"}
   })
 }

@@ -9,7 +9,7 @@ function DonationController($state, $stateParams) {
 
   self.getTotal = function() {
     $.ajax({
-      url: 'http://localhost:3000/api/teams/'+ $stateParams.id,
+      url: API+'/teams/'+ $stateParams.id,
       type: 'GET'
     }).done(function(data) {
       self.total = data.amount;
@@ -21,7 +21,7 @@ function DonationController($state, $stateParams) {
   self.donate = function(amount) {
     self.fullAmount = self.total + amount;
     $.ajax({
-      url: 'http://localhost:3000/api/teams/'+ $stateParams.id,
+      url: API+'/teams/'+ $stateParams.id,
       type: 'PUT',
       data: { amount: self.fullAmount},
     }).done(function() {

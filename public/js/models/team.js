@@ -5,7 +5,7 @@ angular
 Team.$inject = ['$resource'];
 
 function Team($resource) {
-  var Team = $resource("http://localhost:3000/api/teams/:id", null, {
+  var Team = $resource(API+"/teams/:id", null, {
     "update": {method: "PUT"}
   })
   return Team;

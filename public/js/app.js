@@ -1,6 +1,7 @@
 angular
   .module('chariotApp', ['ui.router', 'ngResource'])
-  .config(MainConfig);
+  .config(MainConfig)
+  .constant('API', 'https://chariot-app.herokuapp.com');
 
 function MainConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
