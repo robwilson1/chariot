@@ -7,11 +7,11 @@ var path           = require('path');
 var morgan         = require('morgan');
 var bodyParser     = require('body-parser');
 var cookieParser   = require('cookie-parser');
-
+var config         = require('./db/config');
 var app            = express();
 
 //Database
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/chariot');
+mongoose.connect(config.database);
 
 //Middleware
 app.use(bodyParser.json());

@@ -1,6 +1,7 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
+var config   = require('./config');
 
-mongoose.connect('mongodb://localhost:27017/chariot');
+mongoose.connect(config.database);
 
 var Team = require("../models/team");
 var Competition = require("../models/competition");
