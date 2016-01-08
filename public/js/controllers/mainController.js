@@ -1,10 +1,10 @@
 angular
-  .module("chariotApp")
-  .controller("MainController", MainController);
+  .module('chariotApp')
+  .controller('MainController', MainController);
 
-MainController.$inject = ["Competition", "$state"];
+MainController.$inject = ['Competition', '$state', 'API'];
 
-function MainController(Competition, $state) {
+function MainController(Competition, $state, API) {
   var self = this;
 
   self.competitions = Competition.query();

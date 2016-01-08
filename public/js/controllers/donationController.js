@@ -2,9 +2,9 @@ angular
   .module('chariotApp')
   .controller('DonationController', DonationController);
 
-DonationController.$inject = ['$state', '$stateParams'];
+DonationController.$inject = ['$state', '$stateParams', 'API'];
 
-function DonationController($state, $stateParams) {
+function DonationController($state, $stateParams, API) {
   var self = this;
 
   self.getTotal = function() {
